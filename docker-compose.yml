@@ -1,5 +1,4 @@
-version: "2"
-
+version: "3"
 services:
   grafana:
     image: grafana/grafana
@@ -44,8 +43,6 @@ services:
       HOST_PROC: /rootfs/proc
       HOST_SYS: /rootfs/sys
       HOST_ETC: /rootfs/etc
-      # TELEGRAF_CONFIG_PATH: /etc/telegraf/telegraf.conf
-
     volumes:
       - ./telegraf.conf:/etc/telegraf/telegraf.conf:Z
       - ./collectd:/etc/telegraf/collectd:Z
